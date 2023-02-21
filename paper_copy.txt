@@ -1,0 +1,230 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                 %%
+%% Please do not use \input{...} to include other tex files.       %%
+%% Submit your LaTeX manuscript as one .tex document.              %%
+%%                                                                 %%
+%% All additional figures and files should be attached             %%
+%% separately and not embedded in the \TeX\ document itself.       %%
+%%                                                                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%\documentclass[referee,sn-basic]{sn-jnl}% referee option is meant for double line spacing
+
+%%=======================================================%%
+%% to print line numbers in the margin use lineno option %%
+%%=======================================================%%
+
+%%\documentclass[lineno,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+
+%%======================================================%%
+%% to compile with pdflatex/xelatex use pdflatex option %%
+%%======================================================%%
+\documentclass[sn-standardnature]{sn-jnl}% Standard Nature Portfolio Reference Style
+%%\documentclass[sn-standardnature]{sn-jnl}% Standard Nature Portfolio Reference Style
+    \usepackage{etoolbox}
+    \makeatletter
+    \patchcmd{\ps@headings}%% Regular Pages Style
+    {\hbox to \hsize{\hfill Springer Nature 2021 \LaTeX\ template\hfill}}
+    {\hbox to \hsize{}}
+    {}
+    {}
+    \patchcmd{\ps@titlepage}%% Opening Page Style
+    {\hbox to \hsize{\hfill Springer Nature 2021 \LaTeX\ template\hfill}}
+    {\hbox to \hsize{}}
+    {}
+    {}
+    \patchcmd{\ps@headings}%% Regular Pages Style
+    {\hbox to \hsize{\hfill Springer Nature 2021 \LaTeX\ template\hfill}}
+    {\hbox to \hsize{}}
+    {}
+    {}
+%%\documentclass[pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+%%<additional latex packages if required can be included here>
+
+%%\documentclass[sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+%%\documentclass[pdflatex,sn-mathphys]{sn-jnl}% Math and Physical Sciences Reference Style
+%%\documentclass[sn-aps]{sn-jnl}% American Physical Society (APS) Reference Style
+%%\documentclass[sn-vancouver]{sn-jnl}% Vancouver Reference Style
+%%\documentclass[sn-apa]{sn-jnl}% APA Reference Style
+%%\documentclass[sn-chicago]{sn-jnl}% Chicago-based Humanities Reference Style
+%%\documentclass[sn-standardnature]{sn-jnl}% Standard Nature Portfolio Reference Style
+%%\documentclass[default]{sn-jnl}% Default
+%%\documentclass[default,iicol]{sn-jnl}% Default with double column layout
+
+%%%% Standard Packages
+%%<additional latex packages if required can be included here>
+%%%%
+
+%%%%%=============================================================================%%%%
+%%%%  Remarks: This template is provided to aid authors with the preparation
+%%%%  of original research articles intended for submission to journals published
+%%%%  by Springer Nature. The guidance has been prepared in partnership with
+%%%%  production teams to conform to Springer Nature technical requirements.
+%%%%  Editorial and presentation requirements differ among journal portfolios and
+%%%%  research disciplines. You may find sections in this template are irrelevant
+%%%%  to your work and are empowered to omit any such section if allowed by the
+%%%%  journal you intend to submit to. The submission guidelines and policies
+%%%%  of the journal take precedence. A detailed User Manual is available in the
+%%%%  template package for technical guidance.
+%%%%%=============================================================================%%%%
+\usepackage{float}
+\jyear{2023}%
+
+%% as per the requirement new theorem styles can be included as shown below
+\theoremstyle{thmstyleone}%
+\newtheorem{theorem}{Theorem}%  meant for continuous numbers
+%%\newtheorem{theorem}{Theorem}[section]% meant for sectionwise numbers
+%% optional argument [theorem] produces theorem numbering sequence instead of independent numbers for Proposition
+\newtheorem{proposition}[theorem]{Proposition}%
+%%\newtheorem{proposition}{Proposition}% to get separate numbers for theorem and proposition etc.
+
+\theoremstyle{thmstyletwo}%
+\newtheorem{example}{Example}%
+\newtheorem{remark}{Remark}%
+
+\theoremstyle{thmstylethree}%
+\newtheorem{definition}{Definition}%
+
+\raggedbottom
+%%\unnumbered% uncomment this for unnumbered level heads
+%%<additional latex packages if required can be included here>
+
+\begin{document}
+
+\title[An Overview of the Research Development of Gene Expression Regulation]{An Overview of the Research Development of Gene Expression Regulation}
+
+%%=============================================================%%
+%% Prefix	-> \pfx{Dr}
+%% GivenName	-> \fnm{Joergen W.}
+%% Particle	-> \spfx{van der} -> surname prefix
+%% FamilyName	-> \sur{Ploeg}
+%% Suffix	-> \sfx{IV}
+%% NatureName	-> \tanm{Poet Laureate} -> Title after name
+%% Degrees	-> \dgr{MSc, PhD}
+%% \author*[1,2]{\pfx{Dr} \fnm{Joergen W.} \spfx{van der} \sur{Ploeg} \sfx{IV} \tanm{Poet Laureate}
+%%                 \dgr{MSc, PhD}}\email{iauthor@gmail.com}
+%%=============================================================%%
+
+\author*{\fnm{Shitao} \sur{Huang}}
+
+%%==================================%%
+%% sample for unstructured abstract %%
+%%==================================%%
+
+\abstract{The abstract serves both as a general introduction to the topic and as a brief, non-technical summary of the main results and their implications. Authors are advised to check the author instructions for the journal they are submitting to for word limits and if structural elements like subheadings, citations, or equations are permitted.}
+
+%%================================%%
+%% Sample for structured abstract %%
+%%================================%%
+
+% \abstract{\textbf{Purpose:} The abstract serves both as a general introduction to the topic and as a brief, non-technical summary of the main results and their implications. The abstract must not include subheadings (unless expressly permitted in the journal's Instructions to Authors), equations or citations. As a guide the abstract should not exceed 200 words. Most journals do not set a hard limit however authors are advised to check the author instructions for the journal they are submitting to.
+%
+% \textbf{Methods:} The abstract serves both as a general introduction to the topic and as a brief, non-technical summary of the main results and their implications. The abstract must not include subheadings (unless expressly permitted in the journal's Instructions to Authors), equations or citations. As a guide the abstract should not exceed 200 words. Most journals do not set a hard limit however authors are advised to check the author instructions for the journal they are submitting to.
+%
+% \textbf{Results:} The abstract serves both as a general introduction to the topic and as a brief, non-technical summary of the main results and their implications. The abstract must not include subheadings (unless expressly permitted in the journal's Instructions to Authors), equations or citations. As a guide the abstract should not exceed 200 words. Most journals do not set a hard limit however authors are advised to check the author instructions for the journal they are submitting to.
+%
+% \textbf{Conclusion:} The abstract serves both as a general introduction to the topic and as a brief, non-technical summary of the main results and their implications. The abstract must not include subheadings (unless expressly permitted in the journal's Instructions to Authors), equations or citations. As a guide the abstract should not exceed 200 words. Most journals do not set a hard limit however authors are advised to check the author instructions for the journal they are submitting to.}
+
+\keywords{keyword1, Keyword2, Keyword3, Keyword4}
+
+%%\pacs[JEL Classification]{D8, H51}
+
+%%\pacs[MSC Classification]{35A01, 65L10, 65L12, 65L20, 65L70}
+
+\maketitle
+\section*{Introduction}\label{sec1}
+
+Gene expression regulation is the process of controlling which genes are expressed in a cell's DNA (for making functional products such as proteins) \cite{fletcher2023linking,burg1997regulation}. Gene expression regulation is important for several reasons. First, it conserves energy and space by turning on genes only when they are needed. Second, it enables the body to respond to changes in nutrient concentrations or environmental conditions by adjusting the metabolism of specific nutrients. Third, it is responsible for the expression of unique characteristic traits, growth and development of organisms. Fourth, it enables different cells in a multicellular organism to express very different genomes even though they contain the same DNA, leading to cell differentiation and specialization. Gene expression regulation is a necessary step in metabolic engineering because it allows the production of target products to be optimized by modifying gene expression profiles. However, gene expression regulation is also extremely complex and prone to malfunction, leading to diseases such as cancer. Along the way of exploring the process of gene expression regulation, scientists have discovered many new mechanisms, including many Nobel Prize-winning discoveries.
+
+The significance of these discoveries is that they have advanced our understanding of how life works at all levels, from molecules to organisms to populations. They have also contributed to the improvement of human health and well-being by providing new insights into disease, treatment, prevention and diagnosis. Many of these discoveries have also opened up new areas of research and inspired generations of scientists \cite{burg1997regulation}.
+This article will describe the development of research on gene expression regulation, which will highlight some important discoveries and techniques.
+
+
+
+\section*{The discovery of genetic regulation}\label{sec2}
+
+Gregor Mende studied the inheritance of different traits in pea plants, such as seed shape, seed color, and flower color. He crossed purebred strains of peas with different traits and observed how they were passed on to offspring. He found that each trait was controlled by a pair of factors (now called genes) that segregated during gamete formation and recombined during fertilization. He also developed the concept of dominant and recessive traits and the laws of segregation and independent mating.
+
+Thomas Hunt Morgan studied the fruit fly (Drosophila melanogaster) and its variation in eye color, wing shape, and body size. He observed that some traits were linked and not independently assigned, suggesting that they were located on the same chromosome. He also found that some traits are sex-linked, meaning they are determined by genes on the X or Y chromosomes. He also confirmed that chromosomes are carriers of genetic information.
+
+Oswald Avery and his colleagues Maclyn McCarty and Colin MacLeod conducted experiments on bacteria (Streptococcus pneumoniae) and their ability to convert from a harmless form to a virulent form. They isolated different molecules such as proteins, lipids, carbohydrates and DNA from the virulent bacteria and mixed them with the harmless bacteria to see which could induce conversion. They found that only DNA could do this, providing evidence that DNA is the genetic material.
+
+François Jacob and Jacques Monod are French biologists. They were awarded the Nobel Prize in Physiology or Medicine in 1965, jointly with André Love, for their discoveries about the genetic control of enzyme and virus synthesis.
+
+Jacob and Monod studied how bacteria such as E. coli turn certain genes on or off depending on the availability of nutrients, such as lactose or glucose. They proposed that genes are organized into units called operons, which include a promoter, an operon and one or more structural genes that encode proteins. They also proposed that there are regulatory genes that encode repressors, which are proteins that bind to the operon and prevent transcription of structural genes.
+
+Jacob and Monod built their model based on experiments with mutants that are defective in lactose metabolism. They identified three types of mutations: constitutive, inducible and repressible. Constitutive mutants express structural genes regardless of the presence or absence of lactose. Inducible mutants express structural genes only in the presence of lactose. Repressible mutants express structural genes only when lactose is not present.
+
+Jacob and Monod also discovered the role of messenger RNA (mRNA) as a mediator of DNA and protein synthesis. They showed that mRNA is synthesized from DNA by RNA polymerase in the promoter region and then reaches the ribosome, where it is translated into protein.
+
+Since humans discovered the mechanism of gene expression, people have been continuously studying how to regulate gene expression for optimal purposes\cite{schug2010promoter,lee2004transcriptional,maston2006transcriptional}. Gene expression regulation is the process by which cells control the time, place, amount and type of gene expression. It can occur at different levels, such as chromatin structure, transcription initiation, transcript processing, transcript stability, translation initiation, protein modification, protein degradation, etc. Gene expression regulation enables cells to respond to environmental signals, differentiate into specialized cell types, coordinate cellular functions, maintain homeostasis, and more.
+
+
+\section*{The discovery of transcription factors}\label{sec3}
+
+Transcription factors play a crucial role in gene expression regulation by controlling the transcription of genes. Transcription is the process of making a RNA copy of a gene's DNA sequence, which carries the information needed to build a protein. Transcription factors are proteins that bind to specific regions of DNA near or far from a gene and influence its transcription rate. Depending on their function, transcription factors can be classified as activators or repressors. Activators increase transcription by recruiting RNA polymerase and other co-factors to the gene promoter. Repressors decrease transcription by blocking RNA polymerase or other activators from binding to the promoter. Additionally, transcription factors can regulate gene expression in a tissue-specific manner by interacting with enhancers and silencers. Enhancers are sequences of DNA that enhance transcription when bound by certain transcription factors. Silencers are sequences of DNA that silence transcription when bound by certain transcription factors. By using different combinations of transcription factors, enhancers and silencers, cells can fine-tune their gene expression patterns according to their needs.
+
+Nüsslein-Volhard and Wieschaus are developmental biologists who shared the Nobel Prize in Physiology or Medicine in 1995 for their discoveries concerning “the genetic control of early embryonic development” \cite{nobel1995press,nusslein2017heidelberg,nusslein1980mutations,nobel1995summary}. They conducted a large-scale genetic screen in Drosophila melanogaster, a common fruit fly, to identify genes that are essential for the formation of body segments and organs. They found that mutations in some of these genes caused dramatic defects in embryonic development, such as missing or duplicated body parts. Their work revealed the existence and function of several key gene families, such as homeobox genes, gap genes, pair-rule genes, segment polarity genes, and hedgehog signaling pathway genes, that regulate embryonic patterning and cell differentiation. Their findings have had a profound impact on our understanding of animal development and evolution.
+
+Mark Ptashne is a molecular biologist who pioneered the study of gene regulation by isolating and characterizing a protein called lambda repressor\cite{ptashne2004genetic,ptashne2007transcriptional,ptashne2015regulation}, which controls the genes of a virus that infects bacteria. He showed how this protein binds to specific DNA sequences and switches between two modes of viral reproduction: lytic and lysogenic. He also elucidated the molecular mechanisms of how this switch is influenced by environmental signals, such as UV light or temperature. His work on lambda repressor has been widely recognized as a paradigm for gene regulation in both prokaryotes and eukaryotes.
+
+
+
+
+\section*{Epigenetic modifications and gene expression}\label{sec4}
+
+Epigenetic modifications are changes in gene expression and other genomic functions that do not alter the DNA sequence but can affect how the DNA is read and interpreted by the cell. Epigenetic modifications can be influenced by environmental factors, such as diet, stress, or exposure to toxins, and can be reversible or heritable. Some examples of epigenetic modifications are DNA methylation, histone modification, and non-coding RNA interference. Epigenetic modifications play a role in regulating gene expression by altering the accessibility of DNA to transcription factors and other proteins that control gene activity. Epigenetic modifications can also interact with each other to produce synergistic effects on gene expression. Epigenetic regulation is important for cell differentiation, development, adaptation, and disease.
+
+Allis and Jenuwein are two scientists who have made significant contributions to the field of epigenetics, which studies how chemical modifications on DNA and histones affect gene expression. Histones are proteins that package DNA into compact structures called nucleosomes. Allis and Jenuwein discovered that histones can be modified by various enzymes that add or remove chemical groups such as acetyl, methyl, or phosphate. These modifications alter the interactions between histones and DNA, as well as between histones and other proteins, thereby influencing gene activity. For example, Allis showed that histone acetylation is associated with gene activation, while Jenuwein identified a histone methyltransferase that can methylate specific residues in the histone tails and regulate gene silencing. Their work revealed that histone modifications are dynamic and reversible processes that play a crucial role in regulating gene expression in different cellular contexts.
+
+Fire and Mello are two scientists who have discovered a novel mechanism of gene silencing by double-stranded RNA (dsRNA) in the nematode C. elegans. They showed that injecting dsRNA corresponding to a specific gene can trigger a sequence-specific degradation of the messenger RNA (mRNA) of that gene, resulting in a loss of function phenotype. This phenomenon was named RNA interference (RNAi) by Fire and colleagues. They also demonstrated that RNAi can be inherited by subsequent generations and can affect genes throughout the organism. Their work revealed that RNAi is a conserved biological response to dsRNA that mediates resistance to viral infections and transposable elements, as well as regulates gene expression during development and differentiation. Fire and Mello were awarded the Nobel Prize in Physiology or Medicine in 2006 for their discovery of RNAi.
+
+In order to gain a deeper understanding of the principles of RNA interference, we will then explain in detail its principles and experimental methods.
+
+RNAi is a powerful approach for reducing expression of endogenously expressed proteins for biological applications, or targeting the expression of pathological proteins for therapy. The main types of small RNAs involved in gene silencing are microRNAs (miRNAs) and siRNAs, which are processed from longer double-stranded RNAs by Dicer and loaded into the RNA-induced silencing complex (RISC). The RISC then guides the small RNA to its target mRNA for post-transcriptional gene silencing.
+
+A combination of results obtained from several in vivo and in vitro experiments have gelled into a two-step mechanistic model for RNAi/PTGS. The first step, referred to as the RNAi initiating step, involves binding of the RNA nucleases to a large dsRNA and its cleavage into discrete $\approx 21-$ to $\approx 25-$siRNA. In the second step, these siRNAs join a multinuclease complex, RISC, which degrades the homologous single-stranded mRNAs.
+
+The key insight in the process of PTGS was provided from the experiments of Baulcombe and Hamilton, who identified the product of RNA degradation as a siRNA of $\approx 25$ nucleotides of both sense and antisense polarity. siRNAs are formed and accumulate as double-stranded RNA molecules of defined chemical structures. siRNAs were detected first in plants undergoing either cosuppression or virus-induced gene silencing and were not detectable in control plants that were not silenced. siRNAs were subsequently discovered in Drosophila tissue culture cells in which RNAi was induced by introducing >500-nucleotide-long exogenous dsRNA, in Drosophila embryo extracts that were carrying out RNAi in vitro, and also in Drosophila embryos that were injected with dsRNA. Thus, the generation of siRNA (21 to 25 nucleotides) turned out to be the signature of any homology-dependent RNA-silencing event.
+
+The siRNAs resemble breakdown products of an E. coli RNase III-like digestion. In particular, each strand of siRNA has 5' -phosphate and 3' -hydroxyl termini and 2- to 3-nucleotide 3' overhangs. Interestingly, in vitro-synthesized siRNAs can, in turn, induce specific RNA degradation when added exogenously to Drosophila cell extracts. Specific inhibition of gene expression by these siRNAs has also been observed in many invertebrate and some vertebrate systems.  Schwarz et al. provided direct biochemical evidence that the siRNAs could act as guide RNAs for cognate mRNA degradation.
+
+RNAi is a conserved biological response to double-stranded RNA that mediates resistance to both endogenous and exogenous nucleic acids \ref{fig1}, and regulates gene expression. RNAi has a crucial role in silencing transposons and directing epigenetic modifications in the nucleus. The principles of RNAi involve four basic steps: processing of long dsRNA by Dicer into siRNAs, loading of one siRNA strand onto an Argonaute protein, target recognition by base pairing between siRNA and mRNA, and target cleavage or repression by Argonaute. The experimental methods of RNAi include various techniques for introducing dsRNA into cells or organisms, such as microinjection, electroporation, transfection, viral vectors, feeding, soaking or spraying. Additionally, there are methods for probing RNA structure and function using chemical modification, enzymatic cleavage, crosslinking or footprinting.
+
+\begin{figure}[h]%
+\centering
+\includegraphics[width=0.9\textwidth]{RNAi.png}
+\caption{Primary microRNAs (pri-miRNAs) are transcribed by RNA polymerases and are trimmed by the microprocessor complex (comprising Drosha and microprocessor complex subunit DCGR8) into ~70 nucleotide precursors, called pre-miRNAs(left side of the figure). miRNAs can also be processed from spliced short introns (known as mirtrons). pre-miRNAs contain a loop and usually have interspersed mismatches along the duplex. pre-miRNAs associate with exportin 5 and are exported to the cytoplasm, where a complex that contains Dicer, TAR RNA-binding protein (TRBP; also known as TARBP2) and PACT (also known as PRKRA) processes the pre-miRNAs into miRNA–miRNA* duplexes. The duplex associates with an Argonaute (AGO) protein within the precursor RNAi-induced silencing complex (pre-RISC). One strand of the duplex (the passenger strand) is removed. The mature RISC contains the guide strand, which directs the complex to the target mRNA for post-transcriptional gene silencing. The 'seed' region of an miRNA is indicated; in RNAi trigger design, the off-target potential of this sequence needs to be considered. Long dsRNAs (right side of the figure) are processed by Dicer, TRBP and PACT into small interfering RNAs (siRNAs). siRNAs are 20–24-mer RNAs and harbour 3'OH and 5'phosphate (PO4) groups, with 3' dinucleotide overhangs. Within the pre-RISC complex, an AGO protein cleaves the passenger siRNA strand. Then, the mature RISC, containing an AGO protein and the guide strand, associates with the target mRNA for cleavage. The inset shows the properties of siRNAs. The thermodynamic stability of the terminal sequences will direct strand loading. Like naturally occurring or artificially engineered miRNAs, the potential 'seed' region can be a source for miRNA-like off-target silencing. shRNA, short hairpin RNA\cite{davidson2011current}.}\label{fig1}
+\end{figure}
+
+\section*{Gene editing}\label{sec5}
+
+
+Gene editing is the ability to make highly specific changes in the DNA sequence of a living organism, essentially customizing its genetic makeup. Gene editing is performed using enzymes, particularly nucleases that have been engineered to target a specific DNA sequence, where they introduce cuts into the DNA strands, enabling the removal of existing DNA and the insertion of replacement DNA. Gene editing can affect gene expression regulation, which is the process of controlling which genes in a cell’s DNA are expressed (used to make a functional product such as a protein). By altering the DNA sequence of a gene, gene editing can change its activity level, function or interactions with other molecules. Gene editing can also introduce new genes or remove unwanted genes from an organism’s genome. Gene editing has various applications in biotechnology, medicine and agriculture.
+CRISPR/Cas9 technology is based on a natural system that bacteria use to defend themselves against viruses. Charpentier and Doudna figured out how to reprogram this system to cut any DNA sequence they wanted. This allows researchers to add, remove or change genes in animals, plants and microorganisms with high precision and efficiency.
+
+CRISPR/Cas9 technology has opened up new possibilities for scientific research, biotechnology, agriculture and medicine. It has been used to create new crops, treat genetic diseases, engineer animal models and study gene function.It is a revolutionary gene editing technology that has transformed the field of genetics and has the potential to revolutionize medicine, agriculture, and other industries. The principle of CRISPR/Cas9 technology is based on a naturally occurring mechanism used by bacteria to defend against viruses.
+
+In order to understand CRISPR/Cas9, we need to know what is each of them.
+
+The CRISPR (Clustered Regularly Interspaced Short Palindromic Repeats) system is a segment of DNA in the bacterial genome that contains repetitive sequences, separated by unique sequences known as spacers. When a bacterium is infected by a virus, it incorporates a small piece of the viral DNA into its CRISPR system as a spacer. The CRISPR system can then use this spacer to recognize and destroy the virus if it tries to infect the bacterium again.
+
+Cas9 is a protein that acts as a molecular scissor, cutting the DNA at a specific location in the genome. By combining the CRISPR system with the Cas9 protein, researchers can use a guide RNA molecule to target specific genes and cut them at precise locations. This allows researchers to selectively edit, delete or replace specific genes in an organism's genome. The applications of CRISPR/Cas9 technology are vast and include disease treatment, agriculture, and genetic research.
+
+In 2011, trans-activating crRNA (tracrRNA)—a small RNA that is trans-encoded upstream of the type II CRISPR-Cas locus in \textit{Streptococcus pyogenes}—was reported to be essential for crRNA maturation by ribonuclease III and Cas9, and tracrRNA-mediated activation of crRNA maturation was found to confer sequence-specific immunity against parasite genomes. In 2012, the S. pyogenes CRISPR-Cas9 protein was shown to be a dual-RNA–guided DNA endonuclease that uses the tracrRNA:crRNA duplex to direct DNA cleavage. Cas9 uses its HNH domain to cleave the DNA strand that is complementary to the 20-nucleotide sequence of the crRNA; the RuvC-like domain of Cas9 cleaves the DNA strand opposite the complementary strand. Mutating either the HNH or the RuvC-like domain in Cas9 generates a variant protein with single-stranded DNA cleavage (nickase) activity, whereas mutating both domains (dCas9; Asp10 → Ala, His840 → Ala) results in an RNA-guided DNA binding protein. DNA target recognition requires both base pairing to the crRNA sequence and the presence of a short sequence (PAM) adjacent to the targeted sequence in the DNA.
+
+The dual tracrRNA:crRNA was then engineered as a single guide RNA (sgRNA) that retains two critical features: the 20-nucleotide sequence at the 5' end of the sgRNA that determines the DNA target site by Watson-Crick base pairing, and the double-stranded structure at the 3' side of the guide sequence that binds to Cas9. This created a simple two-component system in which changes to the guide sequence (20 nucleotides in the native RNA) of the sgRNA can be used to program CRISPR-Cas9 to target any DNA sequence of interest as long as it is adjacent to a PAM. In contrast to ZFNs and TALENs, which require substantial protein engineering for each DNA target site to be modified, the CRISPR-Cas9 system requires only a change in the guide RNA sequence. For this reason, the CRISPR-Cas9 technology using the S. pyogenes system has been rapidly and widely adopted by the scientific community to target, edit, or modify the genomes of a vast array of cells and organisms. Phylogenetic studies as well as in vitro and in vivo experiment, show that naturally occurring Cas9 orthologs use distinct tracrRNA:crRNA transcripts as guides, defined by the specificity to the dual-RNA structures. The reported collection of Cas9 orthologs constitutes a large source of CRISPR-Cas9 systems for multiplex gene targeting, and several orthologous CRISPR-Cas9 systems have already been applied successfully for genome editing in human cells [\textit{Neisseria meningitidis}, \textit{S. thermophilus}, and \textit{Treponema denticola}].
+
+Structural analysis of S. pyogenes Cas9 has revealed additional insights into the mechanism of CRISPR-Cas9. Molecular structures of Cas9 determined by electron microscopy and x-ray crystallography show that the protein undergoes large conformational rearrangement upon binding to the guide RNA, with a further change upon association with a target double-stranded DNA (dsDNA). This change creates a channel, running between the two structural lobes of the protein, that binds to the RNA-DNA hybrid as well as to the coaxially stacked dual-RNA structure of the guide corresponding to the crRNA repeat–tracrRNA antirepeat interaction. An arginine-rich $\alpha$ helix bridges the two structural lobes of Cas9 and appears to be the hinge between them, in addition to playing a central role in binding the guide RNA–target DNA hybrid as shown by mutagenesis. The conformational change in Cas9 may be part of the mechanism of target dsDNA unwinding and guide RNA strand invasion, although this idea remains to be tested. Mechanistic studies also show that the PAM is critical for initial DNA binding; in the absence of the PAM, even target sequences fully complementary to the guide RNA sequence are not recognized by Cas9. A crystal structure of Cas9 in complex with a guide RNA and a partially dsDNA target demonstrates that the PAM lies within a base-paired DNA structure. Arginine motifs in the C-terminal domain of Cas9 interact with the PAM on the noncomplementary strand within the major groove. The phosphodiester group at position +1 in the target DNA strand interacts with the minor groove of the duplexed PAM, possibly resulting in local strand separation, the so-called R-loop, immediately upstream of the PAM. Single-molecule experiments also suggest that R-loop association rates are affected primarily by the PAM, whereas R-loop stability is influenced mainly by protospacer elements distal to the PAM. Together with single-molecule and bulk biochemical experiments using mutated target DNAs, a mechanism can be proposed whereby target DNA melting starts at the level of PAM recognition, resulting in directional R-loop formation expanding toward the distal protospacer end and concomitant RNA strand invasion and RNA-DNA hybrid formation.
+
+
+
+\bibliography{sn-bibliography}% common bib file
+%% if required, the content of .bbl file can be included here once bbl is generated
+%%\input sn-article.bbl
+
+%% Default %%
+%%\input sn-sample-bib.tex%
+
+
+\end{document}
